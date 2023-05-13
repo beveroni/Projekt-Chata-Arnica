@@ -1,0 +1,58 @@
+/*Simple css to style toggle switch*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+span {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+.theme-switch {
+  display: inline-block;
+  height: 28px;
+  position: relative;
+  width: 45px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #c8c8c8;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: '';
+  height: 20px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 20px;
+}
+
+input:checked + .slider {
+  background-color: #62b283;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

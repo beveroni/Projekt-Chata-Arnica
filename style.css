@@ -1,0 +1,224 @@
+/* CSS VARIABLES */
+
+:root {
+  --background-primary: #f3f3f3;
+  --background-secondary: #cdddda;
+  --text: #1f2403;
+}
+
+/* ZÁKLADNÍ STYLY */
+
+*,
+body,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  align-items: baseline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  line-height: 1.3;
+}
+
+span {
+  line-height: 1.5;
+}
+
+/* HLAVIČKA - NAVIGACE */
+
+.page-header {
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.navlink {
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+/* HLAVNÍ NADPIS */
+
+.pitch {
+  padding: 2.5rem 1.5rem;
+  font-size: 2.5rem;
+}
+
+/* ÚVODNÍ TEXT  */
+
+.subheading {
+  padding: 2.5rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+.subheading__content {
+  margin: 0 auto;
+}
+
+/* CENOVÁ NABÍDKA */
+
+.pricelist {
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricelist__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pricelist__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer {
+  margin: 1rem 0 2rem 0;
+}
+
+.offer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 0.5rem;
+}
+
+.offer__title {
+  font-size: 1.7rem;
+}
+
+.offer__price {
+  font-size: 1.5rem;
+}
+
+.offer__detail {
+  font-size: 1.2rem;
+  list-style: circle;
+  margin-left: 1.2rem;
+}
+
+/* RECENZE */
+
+.review {
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review__title {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.review__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.review__text {
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+
+.review__author {
+  text-align: end;
+  font-style: normal;
+}
+
+/* PATIČKA - KONTAKT */
+
+.footer {
+  padding: 2.5rem 1.5rem;
+  font-size: 1.2rem;
+
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__row span {
+  display: inline-block;
+  height: 1.2rem;
+}
+
+.contact__label {
+  width: 70px;
+}
+
+.social-media__row {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 100%;
+  margin-right: 0.5rem;
+}
+
+/* SEM ZAČNĚTE PSÁT SVÉ STYLY PRO MOBIL */
+
+@media (min-width: 840px) {
+  /* HLAVIČKA - NAVIGACE */
+  .page-header {
+    padding: 2rem 4rem;
+    padding-bottom: 0;
+  }
+
+  .logo {
+    font-size: 2.25rem;
+  }
+
+  .navlink {
+    font-size: 1.5rem;
+  }
+
+  /* HLAVNÍ NADPIS */
+
+  .pitch {
+    font-size: 3rem;
+  }
+
+  /* ÚVODNÍ TEXT */
+
+  .subheading {
+    padding: 2.5rem 4rem;
+    font-size: 1.75rem;
+  }
+
+  /* RECENZE */
+
+  .review__text {
+    width: 250px;
+    padding: 1.5rem;
+  }
+
+  /* TADY PIŠTE STYLY PRO ŠÍŘKU NAD 800PX */
+}

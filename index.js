@@ -5,11 +5,19 @@ const toggleSwitch = document.querySelector(
 );
 
 const switchTheme = (e) => {
-  if (e.target.checked) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
+  const theme = e.target.checked ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
 };
+
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  if (currentTheme === 'dark') {
+    toggleSwitch.checked = true;
+  }
+}
 
 toggleSwitch.addEventListener('change', switchTheme, false);
